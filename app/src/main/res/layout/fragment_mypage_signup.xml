@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Sign up"
+                android:textSize="30sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="12"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical">
+            <EditText
+                android:layout_marginBottom="60dp"
+                android:id="@+id/edt_full_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Full name" />
+
+            <EditText
+                android:inputType="textEmailAddress"
+                android:id="@+id/edt_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email" />
+            <TextView
+                android:visibility="invisible"
+                android:id="@+id/tv_email_warning"
+                android:textColor="@color/colorAccent"
+                android:text="Định dạng Email không hợp lệ"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="30dp"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:inputType="textPassword"
+                android:id="@+id/edt_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Password" />
+            <TextView
+                android:visibility="invisible"
+                android:id="@+id/tv_pass_warning"
+                android:textColor="@color/colorAccent"
+                android:text="Độ dài mật khẩu phải từ 6-16 kí tự"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="30dp"
+                android:layout_height="wrap_content"/>
+
+            <Button
+                android:enabled="false"
+                android:layout_marginBottom="30dp"
+                android:id="@+id/btn_signup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Sign up" />
+
+            <TextView
+                android:id="@+id/tv_already_account"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:outlineProvider="bounds"
+                android:text="@string/already_member" />
+        </LinearLayout>
+    </LinearLayout>
+</layout>

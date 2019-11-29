@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#D3FFEB"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:fontFamily="@font/bau"
+            android:id="@+id/tokyo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TOKYO"
+            android:textSize="90sp" />
+
+        <TextView
+            android:fontFamily="@font/colona"
+            android:id="@+id/art"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ART"
+            android:textSize="90sp" />
+
+        <TextView
+            android:fontFamily="@font/colona"
+            android:id="@+id/beat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="BEAT"
+            android:textSize="90sp" />
+
+        <ProgressBar
+            android:id="@+id/progress_circular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp" />
+    </LinearLayout>
+</layout>

@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Mock Project</string>
+    <string name="title_home">Home</string>
+    <string name="title_near">Near</string>
+    <string name="title_browse">Browse</string>
+    <string name="title_mypage">My Page</string>
+    <string name="forgot_password"><u>Forgot password</u></string>
+    <string name="already_member"><u>Already Member? Login</u></string>
+    <string name="title_activity_maps">Map</string>
+</resources>
