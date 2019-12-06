@@ -1,4 +1,4 @@
-package com.thanhtung.mockproject.ui.browse;
+package com.thanhtung.mockproject.ui.browse.search.current;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -15,6 +15,7 @@ import com.thanhtung.mockproject.adapter.EventAdapter;
 import com.thanhtung.mockproject.dao.AppEventInSearchdatabase;
 import com.thanhtung.mockproject.databinding.FragmentEventInCategoryBinding;
 import com.thanhtung.mockproject.model.Event;
+import com.thanhtung.mockproject.ui.browse.search.BrowseSearchFragment;
 
 import java.util.ArrayList;
 import java.util.List;

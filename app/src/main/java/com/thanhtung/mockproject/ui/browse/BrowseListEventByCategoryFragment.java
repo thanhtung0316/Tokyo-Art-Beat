@@ -13,6 +13,8 @@ import com.thanhtung.mockproject.R;
 import com.thanhtung.mockproject.adapter.SearchPagerAdapter;
 import com.thanhtung.mockproject.databinding.FragmentListEventByCategoryBinding;
 import com.thanhtung.mockproject.model.Category;
+import com.thanhtung.mockproject.ui.browse.category.listbydate.BrowseListByDateFragment;
+import com.thanhtung.mockproject.ui.browse.category.listbypopular.BrowseListByPopularFragment;
 
 public class BrowseListEventByCategoryFragment extends Fragment implements View.OnClickListener {
     private BrowseListByDateFragment fmbyDate = new BrowseListByDateFragment();
@@ -32,7 +34,6 @@ public class BrowseListEventByCategoryFragment extends Fragment implements View.
         binding.getRoot().setBackgroundColor(Color.WHITE);
         return binding.getRoot();
     }
-
 
     @Override
     public void onClick(View v) {

@@ -109,7 +109,7 @@ public class NearFragment extends Fragment {
                 super.onScrolled(recyclerView, dx, dy);
             }
         });
-        if (checkPermission() == true) {
+        if (checkPermission()) {
             GetLastLocation();
         } else {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {

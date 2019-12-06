@@ -73,11 +73,7 @@ public class SplashActivity extends AppCompatActivity implements Callback<ApiRes
                 return false;
             }
         }
-
-
     }
-
-
     @Override
     public void onResponse(Call<ApiResult> call, Response<ApiResult> response) {
         if (response.body() != null) {
@@ -87,7 +83,6 @@ public class SplashActivity extends AppCompatActivity implements Callback<ApiRes
                 startActivity(intent);
                 finish();
             } else {
-
                 if (!isDateEquals()) {
                     deleteAllTable();
                     Intent intent = new Intent(SplashActivity.this, MainActivity.class);

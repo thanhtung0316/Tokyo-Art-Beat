@@ -14,6 +14,8 @@ import androidx.fragment.app.FragmentTransaction;
 
 import com.thanhtung.mockproject.R;
 import com.thanhtung.mockproject.databinding.FragmentBrowseBinding;
+import com.thanhtung.mockproject.ui.browse.category.BrowseCategoryFragment;
+import com.thanhtung.mockproject.ui.browse.search.BrowseSearchFragment;
 
 public class BrowseFragment extends Fragment {
     private FragmentBrowseBinding binding;

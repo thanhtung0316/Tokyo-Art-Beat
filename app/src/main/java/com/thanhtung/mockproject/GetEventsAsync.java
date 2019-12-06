@@ -2,16 +2,9 @@ package com.thanhtung.mockproject;
 
 import android.os.AsyncTask;
 import android.util.Log;
-
-import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.RecyclerView;
-
-import com.google.android.gms.maps.model.LatLng;
-import com.thanhtung.mockproject.adapter.EventInDetailAdapter;
 import com.thanhtung.mockproject.api.ApiBuilder;
 import com.thanhtung.mockproject.api.ApiResultNearlyEvent;
 import com.thanhtung.mockproject.model.EventDetail;
-import com.thanhtung.mockproject.model.MarkerEvent;
 
 import java.util.ArrayList;
 import java.util.List;

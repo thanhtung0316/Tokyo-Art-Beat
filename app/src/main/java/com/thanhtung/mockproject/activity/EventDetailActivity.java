@@ -54,7 +54,6 @@ public class EventDetailActivity extends AppCompatActivity implements Callback<A
     }
 
     private void init() {
-
         myShared = new MyShared(this);
         TOKEN = "bearer " + myShared.get(KEY_TOKEN);
         intent = getIntent();
@@ -91,10 +90,10 @@ public class EventDetailActivity extends AppCompatActivity implements Callback<A
 
                 ApiBuilder.getInstance().listNearlyEvents(TOKEN,250,geoLong,geoLat).enqueue(callbackNearlyEvent);
             } else {
-                Toast.makeText(this, "Lỗi hệ thống1!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Lỗi hệ thống!", Toast.LENGTH_SHORT).show();
             }
         } else {
-            Toast.makeText(this, "Lỗi hệ thống2!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Lỗi hệ thống!", Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -193,11 +192,7 @@ public class EventDetailActivity extends AppCompatActivity implements Callback<A
                             finish();
                         }
                     });
-
-
                 }
-
-
             }
         }
 

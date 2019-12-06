@@ -6,8 +6,8 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 
-import com.thanhtung.mockproject.ui.mypage.status.MyGoingFragment;
-import com.thanhtung.mockproject.ui.mypage.status.MyWentFragment;
+import com.thanhtung.mockproject.ui.mypage.status.mygoing.MyGoingFragment;
+import com.thanhtung.mockproject.ui.mypage.status.mywent.MyWentFragment;
 
 public class MyPagePagerAdapter extends FragmentStatePagerAdapter {
     private String[] listTab = {"Going", "Went"};

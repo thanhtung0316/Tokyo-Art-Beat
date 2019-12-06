@@ -41,6 +41,8 @@ public class LoginFragment extends Fragment implements LoginListener, TextWatche
         myPageFragment = (MyPageFragment) getParentFragment();
         return binding.getRoot();
     }
+
+
     public void setData(String email, String password){
         binding.edtEmail.setText(email);
         binding.edtPassword.setText(password);

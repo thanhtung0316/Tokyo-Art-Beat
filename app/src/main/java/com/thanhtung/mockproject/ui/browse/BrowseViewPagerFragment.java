@@ -13,6 +13,8 @@ import androidx.fragment.app.Fragment;
 import com.thanhtung.mockproject.R;
 import com.thanhtung.mockproject.adapter.SearchPagerAdapter;
 import com.thanhtung.mockproject.databinding.FragmentViewPagerBinding;
+import com.thanhtung.mockproject.ui.browse.search.current.BrowseCurrentFragment;
+import com.thanhtung.mockproject.ui.browse.search.past.BrowsePastFragment;
 
 public class BrowseViewPagerFragment extends Fragment{
     private BrowseCurrentFragment fmCurrent = new BrowseCurrentFragment();

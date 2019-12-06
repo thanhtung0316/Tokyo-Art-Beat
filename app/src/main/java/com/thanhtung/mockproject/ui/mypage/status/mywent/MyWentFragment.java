@@ -1,4 +1,4 @@
-package com.thanhtung.mockproject.ui.mypage.status;
+package com.thanhtung.mockproject.ui.mypage.status.mywent;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -16,7 +16,7 @@ import com.thanhtung.mockproject.R;
 import com.thanhtung.mockproject.adapter.EventAdapter;
 import com.thanhtung.mockproject.api.ApiBuilder;
 import com.thanhtung.mockproject.api.ApiResult;
-import com.thanhtung.mockproject.databinding.FragmentMygoingBinding;
+import com.thanhtung.mockproject.databinding.FragmentMywentBinding;
 import com.thanhtung.mockproject.model.Event;
 import com.thanhtung.mockproject.ui.mypage.login.LoginFragment;
 
@@ -26,22 +26,20 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-import static com.thanhtung.mockproject.ui.mypage.login.LoginFragment.KEY_TOKEN;
-
-public class MyGoingFragment extends Fragment implements Callback<ApiResult> {
-    private FragmentMygoingBinding binding;
+public class MyWentFragment extends Fragment implements Callback<ApiResult> {
+    private FragmentMywentBinding binding;
     private MyShared myShared;
     private String TOKEN;
     private EventAdapter adapter;
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_mygoing,container,false);
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_mywent, container, false);
         myShared = new MyShared(getContext());
-        binding.swipeToRefresh.setEnabled(false);
         adapter = new EventAdapter(getContext());
-        TOKEN ="bearer "+myShared.get(KEY_TOKEN);
-        ApiBuilder.getInstance().getGoingEvent(TOKEN,1).enqueue(this);
+        binding.swipeToRefresh.setEnabled(false);
+        TOKEN = "bearer "+myShared.get(LoginFragment.KEY_TOKEN);
+        ApiBuilder.getInstance().getGoingEvent(TOKEN,2).enqueue(this);
         return binding.getRoot();
     }
 
@@ -49,32 +47,21 @@ public class MyGoingFragment extends Fragment implements Callback<ApiResult> {
     public void onResponse(Call<ApiResult> call, Response<ApiResult> response) {
         if (response.body()!=null){
             if (response.body().getStatus()==1){
-                List<Event> events =response.body().getResponse().getEvents();
+                List<Event> events = response.body().getResponse().getEvents();
                 if (events.size()==0){
                     binding.tvNoEvent.setVisibility(View.VISIBLE);
                 } else {
-
                     adapter.setData(events);
-                    binding.lvGoing.setAdapter(adapter);
+                    binding.lvWent.setAdapter(adapter);
                 }
             } else {
                 Toast.makeText(getContext(), ""+response.body().getError_message(), Toast.LENGTH_SHORT).show();
-                if (response.body().getError_code()==401||response.body()
-                        .getError_message().equals("expired")){
-                    myShared.remove(KEY_TOKEN);
-                    Toast.makeText(getContext(), "Phiên đăng nhập đã hết hạn, Vui lòng đăng nhập lại!", Toast.LENGTH_SHORT).show();
-                }else {
-                    Toast.makeText(getContext(), ""+response.body().getError_message(), Toast.LENGTH_SHORT).show();
-                }
-
             }
         }
     }
+
     @Override
     public void onFailure(Call<ApiResult> call, Throwable t) {
-        if (getContext()!=null){
-            Toast.makeText(getContext(), "Kết nối mạng để có thể sử dụng tính năng này", Toast.LENGTH_SHORT).show();
-        }
 
     }
 }

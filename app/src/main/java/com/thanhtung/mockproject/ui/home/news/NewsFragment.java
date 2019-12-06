@@ -1,8 +1,7 @@
-package com.thanhtung.mockproject.ui.home.homesubfragment;
+package com.thanhtung.mockproject.ui.home.news;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -36,7 +35,6 @@ public class NewsFragment extends Fragment implements Callback<ApiResult>, Swipe
     private int pageIndex = 2;
     private List<News> data;
     private String databaseName = "news-database";
-    private LinearLayoutManager layoutManager;
     private EndlessRecyclerViewScrollListener scrollListener;
     private LinearLayoutManager manager;
 

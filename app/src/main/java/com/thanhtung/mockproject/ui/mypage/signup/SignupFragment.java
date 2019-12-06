@@ -77,8 +77,6 @@ public class SignupFragment extends Fragment implements View.OnClickListener, Te
                 myPageFragment.showFragment(myPageFragment.getFmLogin(),R.anim.slide_in_right,R.anim.slide_out_left);
                 break;
         }
-
-
     }
 
     @Override
@@ -97,28 +95,24 @@ public class SignupFragment extends Fragment implements View.OnClickListener, Te
 
     @Override
     public void afterTextChanged(Editable s) {
-
     }
-
     @Override
     public void onResponse(Call<ApiResult> call, Response<ApiResult> response) {
         if (response.body()!= null) {
             if (response.body().getStatus()!=0){
                 myPageFragment.showFragment(myPageFragment.getFmLogin(),R.anim.slide_in_right,R.anim.slide_out_left);
                 Toast.makeText(getContext(), "Đăng ký thành công, Vui lòng đăng nhập", Toast.LENGTH_SHORT).show();
+
                 myPageFragment.getFmLogin().setData(binding.edtEmail.getText().toString()
                         , binding.edtPassword.getText().toString());
+
+
             } else {
                 Toast.makeText(getContext(), "Đăng kí thất bại, Tài khoản đã tồn tại", Toast.LENGTH_SHORT).show();
             }
-
-
         } else {
             Toast.makeText(getContext(), "Lỗi hệ thống", Toast.LENGTH_SHORT).show();
-
         }
-
-
     }
 
     @Override

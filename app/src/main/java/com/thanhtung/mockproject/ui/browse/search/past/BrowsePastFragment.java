@@ -1,4 +1,4 @@
-package com.thanhtung.mockproject.ui.browse;
+package com.thanhtung.mockproject.ui.browse.search.past;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -26,6 +26,7 @@ import com.thanhtung.mockproject.dao.AppEventdatabase;
 import com.thanhtung.mockproject.databinding.FragmentEventInCategoryBinding;
 import com.thanhtung.mockproject.model.Event;
 import com.thanhtung.mockproject.model.EventInSearch;
+import com.thanhtung.mockproject.ui.browse.search.BrowseSearchFragment;
 
 import java.util.ArrayList;
 import java.util.List;

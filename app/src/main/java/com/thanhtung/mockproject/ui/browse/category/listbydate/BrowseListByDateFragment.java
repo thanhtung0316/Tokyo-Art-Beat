@@ -1,4 +1,4 @@
-package com.thanhtung.mockproject.ui.browse;
+package com.thanhtung.mockproject.ui.browse.category.listbydate;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -32,7 +32,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class BrowseListByPopularFragment extends Fragment implements SwipeRefreshLayout.OnRefreshListener, Callback<ApiResultInCategory>, EventInCategoryAdapter.ItemEventListener {
+public class BrowseListByDateFragment extends Fragment implements SwipeRefreshLayout.OnRefreshListener, Callback<ApiResultInCategory>, EventInCategoryAdapter.ItemEventListener {
     private FragmentEventInCategoryBinding binding;
     private EventInCategoryAdapter adapter;
     private List<EventInCateGory> events;

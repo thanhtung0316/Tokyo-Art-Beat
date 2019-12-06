@@ -6,8 +6,8 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 
-import com.thanhtung.mockproject.ui.home.homesubfragment.NewsFragment;
-import com.thanhtung.mockproject.ui.home.homesubfragment.PopularFragment;
+import com.thanhtung.mockproject.ui.home.news.NewsFragment;
+import com.thanhtung.mockproject.ui.home.popular.PopularFragment;
 
 public class HomePagerAdapter extends FragmentStatePagerAdapter {
     private String[] listTab = {"News", "Popular"};

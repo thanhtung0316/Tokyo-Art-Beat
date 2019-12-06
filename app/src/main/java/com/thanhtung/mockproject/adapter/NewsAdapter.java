@@ -42,7 +42,6 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsHolder> {
         ItemNewsBinding binding = ItemNewsBinding.inflate(inflater, parent, false);
         return new NewsHolder(binding);
     }
-
     @Override
     public void onBindViewHolder(@NonNull NewsHolder holder, final int position) {
         holder.bindData(data.get(position));
@@ -68,7 +67,6 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsHolder> {
             super(binding.getRoot());
             this.binding = binding;
         }
-
         public void bindData(News item) {
             binding.setItem(item);
             SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
@@ -85,6 +83,8 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsHolder> {
             }
             if (item.getAuthor()==null|| item.getAuthor().equals("")){
                 binding.tvAuthor.setVisibility(View.INVISIBLE);
+            } else {
+                binding.tvAuthor.setVisibility(View.VISIBLE);
             }
 
         }

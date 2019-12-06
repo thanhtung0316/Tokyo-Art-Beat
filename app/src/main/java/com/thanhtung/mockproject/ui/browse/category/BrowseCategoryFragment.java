@@ -1,4 +1,4 @@
-package com.thanhtung.mockproject.ui.browse;
+package com.thanhtung.mockproject.ui.browse.category;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -19,6 +19,7 @@ import com.thanhtung.mockproject.dao.AppEventInCategory;
 import com.thanhtung.mockproject.databinding.FragmentBrowseCategoryBinding;
 import com.thanhtung.mockproject.model.Category;
 import com.thanhtung.mockproject.model.EventInCateGory;
+import com.thanhtung.mockproject.ui.browse.BrowseFragment;
 
 import java.util.ArrayList;
 import java.util.List;

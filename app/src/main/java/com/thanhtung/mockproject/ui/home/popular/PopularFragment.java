@@ -1,4 +1,4 @@
-package com.thanhtung.mockproject.ui.home.homesubfragment;
+package com.thanhtung.mockproject.ui.home.popular;
 
 import android.content.Intent;
 import android.os.Build;

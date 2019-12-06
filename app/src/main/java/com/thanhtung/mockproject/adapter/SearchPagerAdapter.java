@@ -6,9 +6,6 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 
-import com.thanhtung.mockproject.ui.browse.BrowseCurrentFragment;
-import com.thanhtung.mockproject.ui.browse.BrowsePastFragment;
-
 public class SearchPagerAdapter extends FragmentStatePagerAdapter {
 
     private String[] listTab;

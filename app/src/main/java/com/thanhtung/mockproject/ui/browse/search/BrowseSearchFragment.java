@@ -1,4 +1,4 @@
-package com.thanhtung.mockproject.ui.browse;
+package com.thanhtung.mockproject.ui.browse.search;
 
 import android.app.ProgressDialog;
 import android.os.Bundle;
@@ -21,6 +21,10 @@ import com.thanhtung.mockproject.api.ApiSearchResult;
 import com.thanhtung.mockproject.dao.AppEventInSearchdatabase;
 import com.thanhtung.mockproject.databinding.FragmentBrowseSearchBinding;
 import com.thanhtung.mockproject.model.EventInSearch;
+import com.thanhtung.mockproject.ui.browse.BrowseFragment;
+import com.thanhtung.mockproject.ui.browse.BrowseNothingFragment;
+import com.thanhtung.mockproject.ui.browse.BrowseViewPagerFragment;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
